@@ -148,11 +148,11 @@ static struct s3c2410fb_mach_info smdk2440_fb_info __initdata = {
 };
 
 static struct platform_device *smdk2440_devices[] __initdata = {
-	&s3c_device_ohci,
-	&s3c_device_lcd,
-	&s3c_device_wdt,
-	&s3c_device_i2c0,
-	&s3c_device_iis,
+	// &s3c_device_ohci,
+	// &s3c_device_lcd,
+	// &s3c_device_wdt,
+	// &s3c_device_i2c0,
+	// &s3c_device_iis,
 };
 
 static void __init smdk2440_map_io(void)
@@ -170,8 +170,8 @@ static void __init smdk2440_init_time(void)
 
 static void __init smdk2440_machine_init(void)
 {
-	s3c24xx_fb_set_platdata(&smdk2440_fb_info);
-	s3c_i2c0_set_platdata(NULL);
+	// s3c24xx_fb_set_platdata(&smdk2440_fb_info);
+	// s3c_i2c0_set_platdata(NULL);
 
 	platform_add_devices(smdk2440_devices, ARRAY_SIZE(smdk2440_devices));
 	smdk_machine_init();

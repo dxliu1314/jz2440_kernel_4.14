@@ -530,6 +530,16 @@ config SMDK2440_CPU2440
 	default y if ARCH_S3C2440
 	select S3C2440_XTAL_16934400
 
+config MACH_JZ2440
+    bool "JZ2440"
+    select S3C_DEV_NAND
+    select S3C2440_XTAL_12000000
+    select PINCTRL
+    select PINCTRL_S3C24XX
+    select USE_OF
+    help
+      Say Y here if you are using the 100ask JZ2440 board.
+
 endif	# CPU_S3C2440
 
 if CPU_S3C2442
